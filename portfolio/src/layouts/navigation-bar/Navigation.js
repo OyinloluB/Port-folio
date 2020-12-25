@@ -28,7 +28,7 @@ const Navigation = () => {
   return (
     <div className={Styles.container}>
       <div onClick={() => history.push("/")}>
-        <img src={logo} alt="logo" width="40px" style={{ cursor: "pointer" }} />
+        <img src={logo} alt="logo" width="40" style={{ cursor: "pointer" }} />
       </div>
       <div className={Styles.container_navLinks}>
         <ul>
@@ -49,14 +49,14 @@ const Navigation = () => {
             <img
               src={close}
               alt="close-menu"
-              width="20px"
+              width="20"
               onClick={() => setSidebar(false)}
             />
           ) : (
             <img
               src={hamburger}
               alt="hamburger-menu"
-              width="30px"
+              width="30"
               onClick={() => setSidebar(true)}
             />
           )}

@@ -52,7 +52,12 @@ const Contact = () => {
                 <label>Message</label>
                 <textarea type="text" placeholder="How can I help?" name="" />
               </div>
-              <Button primary="primary" text="Send message" color="#203A4C" />
+              <Button
+                primary="primary"
+                text="Send message"
+                color="#203A4C"
+                className={Styles.button}
+              />
             </form>
           </div>
         </div>

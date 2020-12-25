@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div className={Styles.container}>
       <div className={Styles.container_lhs}>
-        <img src={logo} alt="logo" width="40px" style={{ cursor: "pointer" }} />
+        <img src={logo} alt="logo" width="40" style={{ cursor: "pointer" }} />
         <ul>
           {navLinks.items.map((item) => (
             <li>
