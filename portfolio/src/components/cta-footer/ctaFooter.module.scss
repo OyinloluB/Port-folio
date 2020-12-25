@@ -1,0 +1,29 @@
+@import "../../base-styles/mixins.scss";
+@import "../../base-styles/variables.scss";
+
+.container {
+  @include grid(30% 51% 15%, null, 3vh, null);
+  align-items: center;
+  margin: 70px 0;
+
+  @media screen and (max-width: 1024px) {
+    @include grid(45% 20% 25%, null, 3vh, null);
+  }
+
+  @media screen and (max-width: 420px) {
+    @include flex(center, center, column);
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Ibarra Real Nova", serif;
+    letter-spacing: -0.36px;
+    line-height: 42px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  button {
+    width: 100%;
+  }
+}

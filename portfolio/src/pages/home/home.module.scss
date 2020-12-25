@@ -1,0 +1,125 @@
+@import "../../base-styles/variables.scss";
+@import "../../base-styles/mixins.scss";
+
+.header {
+  margin-top: 20px;
+  height: 70vh;
+  position: relative;
+
+  @media screen and (max-width: 420px) {
+    @include flex(flex-start, flex-start, column);
+    position: unset;
+  }
+
+  &_image {
+    @media screen and (max-width: 1024px) {
+      height: 70vh;
+    }
+
+    // @media screen and (max-width: 420px) {
+    //   height: unset;
+    // }
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+
+      @media screen and (max-width: 420px) {
+        height: unset;
+        position: unset;
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: $primaryColor;
+  position: absolute;
+  padding: 20px 30px 0 30px;
+  width: 32%;
+  bottom: 0;
+
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    width: 62%;
+  }
+
+  @media screen and (max-width: 420px) {
+    position: unset;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0 0 40px 0;
+    letter-spacing: -0.45px;
+    font-family: "Ibarra Real Nova", serif;
+    font-weight: 700;
+
+    @media screen and (max-width: 420px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.about {
+  @include grid(auto auto, null, 15vh, null);
+  margin-top: 100px;
+  align-items: flex-start;
+
+  @media screen and (max-width: 1024px) {
+    @include grid(auto, null, null, 8vh);
+    margin-top: 100px;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-top: 50px;
+  }
+
+  &_image {
+    img {
+      @media screen and (max-width: 420px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &_text {
+    font-family: "Public Sans", sans-serif;
+    line-height: 30px;
+    font-size: 16px;
+    @include grid(null, 1px auto 1px, null, null);
+    justify-content: space-between;
+    height: 100%;
+
+    &_wrapper {
+      @include flex(flex-start, center, column);
+      margin-right: 90px;
+
+      @media screen and (max-width: 420px) {
+        margin-right: 0;
+      }
+
+      h2 {
+        font-family: "Ibarra Real Nova", serif;
+        letter-spacing: -0.36px;
+        line-height: 42px;
+        font-size: 35px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      button {
+        width: 60%;
+
+        @media screen and (max-width: 420px) {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

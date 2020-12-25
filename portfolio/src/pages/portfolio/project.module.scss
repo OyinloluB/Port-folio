@@ -1,0 +1,121 @@
+@import "../../base-styles/mixins.scss";
+@import "../../base-styles/variables.scss";
+
+.container {
+  margin-top: 50px;
+}
+
+.text {
+  @include flex(flex-start, space-between, row);
+  margin-top: 40px;
+
+  @media screen and (max-width: 768px) {
+    @include flex(flex-start, space-between, column);
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 0;
+  }
+
+  &_lhs {
+    @include flex(flex-start, center, column);
+
+    @media screen and (max-width: 420px) {
+      padding: 20px 0;
+    }
+
+    &_dsktop {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 420px) {
+        display: block;
+      }
+
+      h2 {
+        font-family: "Ibarra Real Nova", serif;
+        letter-spacing: -0.36px;
+        line-height: 42px;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      p:nth-child(1) {
+        width: 350px;
+
+        @media screen and (max-width: 420px) {
+          width: unset;
+        }
+      }
+    }
+
+    &_mobile {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+
+      @media screen and (max-width: 420px) {
+        display: none;
+      }
+
+      &_container {
+        @media screen and (max-width: 768px) {
+          @include flex(flex-start, space-between, row);
+        }
+      }
+    }
+  }
+
+  &_rhs {
+    margin-left: 100px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 420px) {
+      padding: 20px 0;
+    }
+
+    p {
+      @media screen and (max-width: 420px) {
+        width: 300px;
+      }
+    }
+
+    h3 {
+      font-family: "Ibarra Real Nova", serif;
+      letter-spacing: -0.29px;
+      line-height: 36px;
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+p {
+  font-family: "Public Sans", sans-serif;
+  color: $greyishDarkBlue;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+button {
+  margin: 20px 0;
+  width: 60%;
+}
+
+.image_container {
+  img {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

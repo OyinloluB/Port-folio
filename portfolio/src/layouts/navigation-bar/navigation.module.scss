@@ -1,0 +1,63 @@
+@import "../../base-styles/mixins.scss";
+@import "../../base-styles/variables.scss";
+
+.container {
+  @include flex(center, space-between, row);
+  font-family: "Public Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $greyishDarkBlue;
+
+  &_navLinks {
+    ul {
+      @include flex(center, null, row);
+
+      @media screen and (max-width: 420px) {
+        display: none;
+      }
+
+      li {
+        padding-left: 25px;
+        list-style: none;
+        cursor: pointer;
+
+        a {
+          color: $greyishDarkBlue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .mobile_nav {
+      display: none;
+
+      @media screen and (max-width: 420px) {
+        @include flex(center, center, column);
+        background-color: $greyishDarkBlue;
+        padding: 20px 50px;
+        position: absolute;
+        right: 40px;
+        top: 60px;
+      }
+
+      li {
+        padding: 15px 0;
+        list-style: none;
+        cursor: pointer;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+    @media screen and (max-width: 420px) {
+      display: block;
+    }
+  }
+}
